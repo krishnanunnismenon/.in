@@ -1,0 +1,9 @@
+.link {
+  border-bottom: 1px solid #d9d7d2;
+  padding-bottom: 2px;
+  transition: border-color 0.2s ease;
+}
+
+.link:hover {
+  border-bottom-color: #161513;
+}

@@ -1,0 +1,9 @@
+.emailLink {
+  border-bottom: 1px solid #161513;
+  padding-bottom: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.emailLink:hover {
+  opacity: 0.6;
+}

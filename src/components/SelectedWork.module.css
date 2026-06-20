@@ -1,0 +1,13 @@
+.linkItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  padding: 18px 0;
+  border-bottom: 1px solid #efeeea;
+  transition: opacity 0.2s ease;
+}
+
+.linkItem:hover {
+  opacity: 0.58;
+}
