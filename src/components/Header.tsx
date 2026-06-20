@@ -9,7 +9,7 @@ export default function Header() {
       fontSize: '13px',
       letterSpacing: '.01em',
       color: '#8a8782',
-      marginBottom: '116px'
+      marginBottom: '100px'
     }}>
       <Link href="/" style={{ color: '#161513', fontWeight: 500 }}>
         Krishnanunni
