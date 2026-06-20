@@ -10,6 +10,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Krishnanunni | Full-stack Developer",
   description: "Portfolio and writings of Krishnanunni, a full-stack developer who owns the product from schemas to the last pixel.",
+  keywords: ['Krishnanunni', 'Krishnanunni developer', 'Krishnanunni Kerala', 'krishnanunni.in', 'Software Engineer Kerala'],
 };
 
 export default function RootLayout({
