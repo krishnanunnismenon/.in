@@ -20,7 +20,7 @@ export default function NowSection() {
         margin: 0,
         maxWidth: '48ch'
       }}>
-        Currently designing and shipping <strong style={{ fontWeight: 500 }}>[product]</strong> at <strong style={{ fontWeight: 500 }}>[Company]</strong> — owning the full stack, from Postgres schemas to the last pixel.
+        Currently designing and shipping <strong style={{ fontWeight: 500 }}>EV charging infra</strong> at <strong style={{ fontWeight: 500 }}>chargeMOD</strong> — owning the full stack, from  schemas to the last pixel.
       </p>
     </section>
   );
