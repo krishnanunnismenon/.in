@@ -1,69 +1,36 @@
+import Link from 'next/link';
+import { portfolio } from '@/data/portfolio';
+import Arrow from './site/Arrow';
 import styles from './SelectedWork.module.css';
-
-const projects = [
-  {
-    title: 'eleven-hack',
-    description: 'Custom hackathon project and integrations. TypeScript, React, APIs.',
-    year: '2026',
-    link: 'https://github.com/krishnanunnismenon/eleven-hack'
-  },
-  {
-    title: 'ArunJuke',
-    description: 'Collaborative jukebox player and media client. Flutter, WebSockets, Audio APIs.',
-    year: '2025',
-    link: 'https://github.com/krishnanunnismenon/ArunJuke'
-  }
-];
 
 export default function SelectedWork() {
   return (
-    <section style={{
-      borderTop: '1px solid #e6e4df',
-      paddingTop: '24px',
-      marginTop: '64px'
-    }}>
-      <div style={{
-        fontSize: '12px',
-        textTransform: 'uppercase',
-        letterSpacing: '.14em',
-        color: '#a3a09b',
-        marginBottom: '10px'
-      }}>
-        Selected work
-      </div>
-      <div style={{ display: 'flex', flexDirection: 'column' }}>
-        {projects.map((project, idx) => (
-          <a
-            key={idx}
-            href={project.link}
-            className={styles.linkItem}
-          >
-            <span style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '5px',
-              minWidth: 0
-            }}>
-              <span style={{ fontSize: '17px', fontWeight: 500 }}>{project.title}</span>
-              <span style={{
-                fontSize: '14px',
-                color: '#8a8782',
-                lineHeight: 1.45
-              }}>
-                {project.description}
-              </span>
-            </span>
-            <span style={{
-              fontSize: '13px',
-              color: '#a3a09b',
-              whiteSpace: 'nowrap',
-              flex: 'none'
-            }}>
-              {project.year}
-            </span>
-          </a>
-        ))}
-      </div>
+    <section className={styles.work} aria-labelledby="work-title">
+      <h2 id="work-title" className={styles.sectionTitle}>Things I work on</h2>
+      {portfolio.projects.map(project => (
+        <article className={styles.project} key={project.id}>
+          <h3 className={styles.title}>
+            {project.href ? <Link href={project.href} prefetch={false}>{project.title}<Arrow /></Link> : project.title}
+          </h3>
+          <p className={styles.description}>{project.description}</p>
+          {project.id === 'thinkpad' ? (
+            <Link className={styles.explore} href="/lab/thinkpad" prefetch={false}>Look inside the homelab<Arrow /></Link>
+          ) : (
+            <details className={styles.reveal}>
+              <summary>Show me how they connect</summary>
+              <div className={styles.answer}>
+                <ol className={styles.connection} aria-label="A simplified charging status journey">
+                  <li><strong>Charger</strong><span>Sends its status</span></li>
+                  <li><strong>Service</strong><span>Processes the update</span></li>
+                  <li><strong>App</strong><span>Shows it to a driver</span></li>
+                </ol>
+                <p>Different systems need a shared way to talk. I work on the connections and test them with real chargers.</p>
+                <p className={styles.note}>A simplified example of one status update.</p>
+              </div>
+            </details>
+          )}
+        </article>
+      ))}
     </section>
   );
 }

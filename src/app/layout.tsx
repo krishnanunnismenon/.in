@@ -9,7 +9,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Krishnanunni | Full-stack Developer",
-  description: "Portfolio and writings of Krishnanunni, a full-stack developer who owns the product from schemas to the last pixel.",
+  description: "Krishnanunni, full-stack developer and Team Lead at chargeMOD. Small explanations of connected systems, a ThinkPad homelab, and things I’m learning.",
   keywords: ['Krishnanunni', 'Krishnanunni developer', 'Krishnanunni Kerala', 'krishnanunni.in', 'Software Engineer Kerala'],
 };
 
@@ -21,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable}`}>
       <body>
+        <a className="skipLink" href="#main-content">Skip to content</a>
         {children}
       </body>
     </html>

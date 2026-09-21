@@ -5,23 +5,36 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "start": "node scripts/preview.mjs",
+    "lint": "eslint",
+    "test:lab": "node --test tests/thinkpad/*.test.mjs",
+    "test:lab:browser": "node tests/thinkpad/browser.mjs",
+    "preview": "node scripts/preview.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/thinkpad/*.test.mjs tests/content/*.test.mjs",
+    "test:production": "node tests/thinkpad/production.mjs",
+    "test:handover": "node tests/thinkpad/handover.mjs"
   },
   "dependencies": {
+    "@react-three/fiber": "9.7.0",
     "gray-matter": "^4.0.3",
     "marked": "^18.0.5",
     "next": "16.2.9",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "sanitize-html": "2.17.7",
+    "three": "0.186.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/sanitize-html": "2.16.1",
+    "@types/three": "0.186.0",
     "eslint": "^9",
     "eslint-config-next": "16.2.9",
+    "playwright-core": "1.63.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

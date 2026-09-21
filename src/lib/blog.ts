@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { marked } from 'marked';
+import { renderMarkdown } from './markdown';
 
 const postsDirectory = path.join(process.cwd(), 'content/posts');
 
@@ -31,7 +31,7 @@ export function getAllPosts(): BlogPost[] {
       const { data, content } = matter(fileContents);
 
       // Use marked to parse the markdown body content
-      const contentHtml = marked.parse(content) as string;
+      const contentHtml = renderMarkdown(content);
 
       return {
         slug,
@@ -48,6 +48,7 @@ export function getAllPosts(): BlogPost[] {
 }
 
 export function getPostBySlug(slug: string): BlogPost | null {
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) return null;
   try {
     const fullPath = path.join(postsDirectory, `${slug}.md`);
     if (!fs.existsSync(fullPath)) {
@@ -55,7 +56,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
     }
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
-    const contentHtml = marked.parse(content) as string;
+    const contentHtml = renderMarkdown(content);
 
     return {
       slug,

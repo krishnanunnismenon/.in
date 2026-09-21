@@ -18,6 +18,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Standard static pages
   const staticPages = [
     {
+      url: `${baseUrl}/lab/thinkpad`,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
       url: baseUrl,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,

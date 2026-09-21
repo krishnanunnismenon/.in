@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-19T12:02:03.777866+00:00",
+  "title": "Design System: Krishnanunni — Field Notes",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "tonalRamp": [
+          "oklch(15.00% 0.00670 97.35)",
+          "oklch(26.43% 0.00670 97.35)",
+          "oklch(37.86% 0.00670 97.35)",
+          "oklch(49.29% 0.00670 97.35)",
+          "oklch(60.71% 0.00670 97.35)",
+          "oklch(72.14% 0.00670 97.35)",
+          "oklch(83.57% 0.00670 97.35)",
+          "oklch(95.00% 0.00670 97.35)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.01167 128.95)",
+          "oklch(26.43% 0.01167 128.95)",
+          "oklch(37.86% 0.01167 128.95)",
+          "oklch(49.29% 0.01167 128.95)",
+          "oklch(60.71% 0.01167 128.95)",
+          "oklch(72.14% 0.01167 128.95)",
+          "oklch(83.57% 0.01167 128.95)",
+          "oklch(95.00% 0.01167 128.95)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "tonalRamp": [
+          "oklch(15.00% 0.01779 123.35)",
+          "oklch(26.43% 0.01779 123.35)",
+          "oklch(37.86% 0.01779 123.35)",
+          "oklch(49.29% 0.01779 123.35)",
+          "oklch(60.71% 0.01779 123.35)",
+          "oklch(72.14% 0.01779 123.35)",
+          "oklch(83.57% 0.01779 123.35)",
+          "oklch(95.00% 0.01779 123.35)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Accent",
+        "tonalRamp": [
+          "oklch(15.00% 0.05866 138.78)",
+          "oklch(26.43% 0.05866 138.78)",
+          "oklch(37.86% 0.05866 138.78)",
+          "oklch(49.29% 0.05866 138.78)",
+          "oklch(60.71% 0.05866 138.78)",
+          "oklch(72.14% 0.05866 138.78)",
+          "oklch(83.57% 0.05866 138.78)",
+          "oklch(95.00% 0.05866 138.78)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule",
+        "tonalRamp": [
+          "oklch(15.00% 0.01391 120.31)",
+          "oklch(26.43% 0.01391 120.31)",
+          "oklch(37.86% 0.01391 120.31)",
+          "oklch(49.29% 0.01391 120.31)",
+          "oklch(60.71% 0.01391 120.31)",
+          "oklch(72.14% 0.01391 120.31)",
+          "oklch(83.57% 0.01391 120.31)",
+          "oklch(95.00% 0.01391 120.31)"
+        ]
+      },
+      "wash": {
+        "role": "neutral",
+        "displayName": "Wash",
+        "tonalRamp": [
+          "oklch(15.00% 0.01364 120.28)",
+          "oklch(26.43% 0.01364 120.28)",
+          "oklch(37.86% 0.01364 120.28)",
+          "oklch(49.29% 0.01364 120.28)",
+          "oklch(60.71% 0.01364 120.28)",
+          "oklch(72.14% 0.01364 120.28)",
+          "oklch(83.57% 0.01364 120.28)",
+          "oklch(95.00% 0.01364 120.28)"
+        ]
+      },
+      "focus": {
+        "role": "primary",
+        "displayName": "Focus",
+        "tonalRamp": [
+          "oklch(15.00% 0.12052 31.48)",
+          "oklch(26.43% 0.12052 31.48)",
+          "oklch(37.86% 0.12052 31.48)",
+          "oklch(49.29% 0.12052 31.48)",
+          "oklch(60.71% 0.12052 31.48)",
+          "oklch(72.14% 0.12052 31.48)",
+          "oklch(83.57% 0.12052 31.48)",
+          "oklch(95.00% 0.12052 31.48)"
+        ]
+      },
+      "selection": {
+        "role": "neutral",
+        "displayName": "Selection",
+        "tonalRamp": [
+          "oklch(15.00% 0.05149 124.30)",
+          "oklch(26.43% 0.05149 124.30)",
+          "oklch(37.86% 0.05149 124.30)",
+          "oklch(49.29% 0.05149 124.30)",
+          "oklch(60.71% 0.05149 124.30)",
+          "oklch(72.14% 0.05149 124.30)",
+          "oklch(83.57% 0.05149 124.30)",
+          "oklch(95.00% 0.05149 124.30)"
+        ]
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "reduced-motion",
+        "value": "animation: none !important; transition: none !important; scroll-behavior: auto !important",
+        "purpose": "Applied to every element and pseudo-element under prefers-reduced-motion: reduce; no animation is otherwise implemented."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile",
+        "value": "480px"
+      },
+      {
+        "name": "connection-stack",
+        "value": "350px"
+      }
+    ],
+    "rampNote": "Generated OKLCH strips are panel previews only; they are not approved production palette tokens."
+  },
+  "components": [
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Wrapping reading-site navigation.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Example navigation\"><a href=\"#writing\">Writing</a><a href=\"#about\">About</a></nav>",
+      "css": ".ds-nav{display:flex;flex-wrap:wrap;gap:22px;font-size:13px;line-height:1.5;color:var(--color-muted,#606459);font-family:var(--font-sans,Inter),-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;}.ds-nav a{display:inline-block;padding-block:12px;color:inherit;text-decoration:none}.ds-nav a:hover{color:var(--color-accent,#344c2d);text-decoration:underline;text-underline-offset:5px}:where(a,summary):focus-visible{outline:2px solid var(--color-focus,#8b3527);outline-offset:5px;border-radius:2px}"
+    },
+    {
+      "name": "Exploration link",
+      "kind": "custom",
+      "refersTo": "action-link",
+      "description": "An underlined text action with a decorative direction arrow.",
+      "html": "<a class=\"ds-explore\" href=\"#homelab\">Look inside the homelab<svg width=\"15\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h15M13 5l7 7-7 7\" stroke=\"currentColor\" stroke-width=\"1.5\"/></svg></a>",
+      "css": ".ds-explore{display:inline-flex;align-items:center;gap:12px;min-height:44px;color:var(--color-accent,#344c2d);font-size:14px;text-decoration:underline;text-underline-offset:5px;font-family:var(--font-sans,Inter),-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;}:where(a,summary):focus-visible{outline:2px solid var(--color-focus,#8b3527);outline-offset:5px;border-radius:2px}"
+    },
+    {
+      "name": "Connection disclosure",
+      "kind": "custom",
+      "refersTo": "answer-panel",
+      "description": "A native reveal with a flat wash behind the explanation.",
+      "html": "<details class=\"ds-reveal\"><summary>Show me how they connect</summary><div class=\"ds-answer\">Charger → Service → App<p>A simplified example of one status update.</p></div></details>",
+      "css": ".ds-reveal{font-family:var(--font-sans,Inter),-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;}.ds-reveal summary{width:fit-content;padding-block:12px;min-height:44px;cursor:pointer;color:var(--color-accent,#344c2d);font-size:14px}.ds-reveal summary:hover{text-decoration:underline}.ds-answer{padding:20px;margin-top:6px;background:var(--color-wash,#ecefe5);color:var(--color-ink,#252822);font-size:14px;line-height:1.65}.ds-answer p{font-size:12px;color:var(--color-muted,#606459);margin:9px 0 0}:where(a,summary):focus-visible{outline:2px solid var(--color-focus,#8b3527);outline-offset:5px;border-radius:2px}"
+    },
+    {
+      "name": "Writing row",
+      "kind": "custom",
+      "description": "A full-row post link with quiet date and bottom rule.",
+      "html": "<a class=\"ds-writing\" href=\"#post\"><span>On building for the few, not the many</span><span class=\"ds-date\">Essay</span></a>",
+      "css": ".ds-writing{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:16px 0;border-bottom:1px solid var(--color-rule,#d4d7cd);font-size:15px;line-height:1.5;color:var(--color-ink,#252822);text-decoration:none;font-family:var(--font-sans,Inter),-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;}.ds-date{flex-shrink:0;color:var(--color-muted,#606459);font-size:12px}.ds-writing:hover{color:var(--color-accent,#344c2d)}.ds-writing:hover>span:first-child{text-decoration:underline;text-underline-offset:5px}:where(a,summary):focus-visible{outline:2px solid var(--color-focus,#8b3527);outline-offset:5px;border-radius:2px}"
+    },
+    {
+      "name": "Lab question",
+      "kind": "custom",
+      "description": "An independent native question with an accent open state.",
+      "html": "<details class=\"ds-question\"><summary>Where does a song come from?</summary><div class=\"ds-lab-answer\">Your player requests a song. The music service on the ThinkPad sends it back for the player to play.</div></details>",
+      "css": ".ds-question{border-bottom:1px solid var(--color-rule,#d4d7cd);color:var(--color-ink,#252822);font-family:var(--font-sans,Inter),-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;}.ds-question summary{padding-block:19px;font-size:16px;line-height:1.5;cursor:pointer}.ds-question summary:hover,.ds-question[open] summary{color:var(--color-accent,#344c2d)}.ds-lab-answer{padding:0 0 23px 18px;font-size:15px;line-height:1.7}:where(a,summary):focus-visible{outline:2px solid var(--color-focus,#8b3527);outline-offset:5px;border-radius:2px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Field Notes",
+    "overview": "A quiet personal site with pale paper, dark ink, green links, serif headings and a compact reading column. Brief first-person context leads to labeled questions and small explanations. The owner selected A — Field Notes on 2026-09-19, with less text and learning through interaction; those choices are settled.\n\nThis record captures the implemented Phase 2 homepage and server-rendered ThinkPad introduction. Source CSS is the implementation authority; the frontmatter records its reusable values, not a new token layer to add to the application. `docs/portfolio-redesign.md` owns approval and phase status. Existing blog typography remains its own reading treatment. The new shared header, footer, palette and focus treatment do not authorize redesigning essays.",
+    "keyCharacteristics": [
+      "A narrow reading shell and modest headings.",
+      "Flat rules and pale answer surfaces, without decorative elevation.",
+      "Native disclosures that reveal detail on request.",
+      "Authored geometric diagram icons with adjacent text labels.",
+      "Useful content without JavaScript, canvas or WebGL."
+    ],
+    "rules": [],
+    "dos": [
+      "**Do** preserve the selected Field Notes direction and compact reading shell.",
+      "**Do** offer short, accessible explanations through clearly labeled native disclosures.",
+      "**Do** keep essential text useful without JavaScript, motion or canvas.",
+      "**Do** preserve the shared visible focus treatment and natural document flow.",
+      "**Do** keep public facts separate from illustrative models and future scene state.",
+      "**Do** retain the existing essays, slugs and their route-specific typography."
+    ],
+    "donts": [
+      "**Don't** reopen the selected direction or reproduce the rejected old ThinkPad appearance.",
+      "**Don't** add giant marketing headlines, bento dashboards, glass panels, mandatory terminals or boot sequences.",
+      "**Don't** add continuous decorative animation, drag-only controls or unlabeled hotspots.",
+      "**Don't** imply that the authored diagram is a 3D scene or a live view of the owner's server.",
+      "**Don't** invent metrics, credentials, service inventory or exact hardware from visual references."
+    ]
+  }
+}

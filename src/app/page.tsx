@@ -1,38 +1,31 @@
 import { getAllPosts } from '@/lib/blog';
+import { portfolio } from '@/data/portfolio';
 import Header from '@/components/Header';
-import Hero from '@/components/Hero';
-import ProfileCard from '@/components/ProfileCard';
-import NowSection from '@/components/NowSection';
 import SelectedWork from '@/components/SelectedWork';
 import WritingSection from '@/components/WritingSection';
-import ElsewhereSection from '@/components/ElsewhereSection';
-import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import site from '@/components/site/Site.module.css';
+import styles from './Home.module.css';
 
 export default function Home() {
-  const posts = getAllPosts();
-  
-  // Format posts to the structure WritingSection expects
-  const formattedPosts = posts.map(post => ({
-    slug: post.slug,
-    title: post.title,
-    date: post.displayDate
-  }));
+  const posts = getAllPosts().map(post => ({ slug: post.slug, title: post.title, date: post.displayDate }));
 
   return (
-    <div style={{
-      maxWidth: '620px',
-      margin: '0 auto',
-      padding: '72px 28px 110px'
-    }}>
+    <div className={site.shell}>
       <Header />
-      <Hero />
-      <ProfileCard flipTrigger="click" flipAxis="horizontal" showFlipHint={true} />
-      <NowSection />
-      <SelectedWork />
-      <WritingSection posts={formattedPosts} />
-      <ElsewhereSection />
-      <ContactSection />
+      <main id="main-content" tabIndex={-1}>
+        <section className={styles.introduction} aria-labelledby="introduction-title">
+          <h1 id="introduction-title">I’m {portfolio.name}.</h1>
+          <p>{portfolio.introduction}</p>
+        </section>
+        <SelectedWork />
+        <WritingSection posts={posts} />
+        <section id="about" className={`${styles.section} ${styles.about}`} aria-labelledby="about-title">
+          <h2 id="about-title" className={styles.sectionTitle}>A little background</h2>
+          <p>{portfolio.background}</p>
+          <p>{portfolio.interests}</p>
+        </section>
+      </main>
       <Footer />
     </div>
   );

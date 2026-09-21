@@ -1,20 +1,20 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getAllPosts } from '@/lib/blog';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import site from '@/components/site/Site.module.css';
+
+export const metadata: Metadata = { title: 'Writing | Krishnanunni', description: 'Essays by Krishnanunni on building software and trust.' };
 
 export default function BlogIndex() {
   const posts = getAllPosts();
 
   return (
-    <div style={{
-      maxWidth: '620px',
-      margin: '0 auto',
-      padding: '72px 28px 110px'
-    }}>
+    <div className={site.shell}>
       <Header />
       
-      <main style={{ marginTop: '40px' }}>
+      <main id="main-content" tabIndex={-1} style={{ marginTop: '40px' }}>
         <h1 style={{
           fontSize: 'clamp(28px, 5vw, 42px)',
           fontWeight: 500,
@@ -30,7 +30,7 @@ export default function BlogIndex() {
             <article key={post.slug} style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <div style={{
                 fontSize: '13px',
-                color: '#8a8782',
+                color: 'var(--color-muted)',
                 letterSpacing: '0.02em',
               }}>
                 {new Date(post.date).toLocaleDateString('en-US', {

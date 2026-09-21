@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import site from '@/components/site/Site.module.css';
 import styles from './BlogPost.module.css';
 import { Metadata } from 'next';
 
@@ -36,16 +37,12 @@ export default async function BlogPostPage({ params }: BlogPostProps) {
   }
 
   return (
-    <div style={{
-      maxWidth: '620px',
-      margin: '0 auto',
-      padding: '72px 28px 110px'
-    }}>
+    <div className={site.shell}>
       <Header />
       
-      <main style={{ marginTop: '40px' }}>
+      <main id="main-content" tabIndex={-1} style={{ marginTop: '40px' }}>
         <Link href="/blog" style={{
-          color: '#8a8782',
+          color: 'var(--color-muted)',
           fontSize: '13px',
           display: 'inline-block',
           marginBottom: '32px',
@@ -58,7 +55,7 @@ export default async function BlogPostPage({ params }: BlogPostProps) {
           <header style={{ marginBottom: '40px' }}>
             <div style={{
               fontSize: '13px',
-              color: '#8a8782',
+              color: 'var(--color-muted)',
               letterSpacing: '0.02em',
               marginBottom: '12px'
             }}>
